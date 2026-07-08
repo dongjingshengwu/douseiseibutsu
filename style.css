@@ -1,0 +1,427 @@
+:root {
+    --green: #1f6b38;
+    --deep: #0f3f24;
+    --gold: #ffb400;
+    --bg: #f7f7f2;
+    --text: #333;
+    --muted: #666;
+    --white: #fff
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: 'Yu Gothic', 'Hiragino Kaku Gothic ProN', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+img {
+    max-width: 100%;
+    display: block
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(31, 107, 56, .96);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 7%;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .12)
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.1
+}
+
+.logo span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #ffd966;
+    margin-top: 2px
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+    font-size: 16px
+}
+
+.nav a:hover {
+    color: #ffd966
+}
+
+.hero {
+    min-height: 680px;
+    background: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url('images/honeybee.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px
+}
+
+.hero-card {
+    background: rgba(0, 0, 0, .48);
+    color: #fff;
+    padding: 52px 64px;
+    border-radius: 22px;
+    backdrop-filter: blur(2px)
+}
+
+.hero h1 {
+    font-size: 58px;
+    letter-spacing: 2px
+}
+
+.hero .en {
+    font-size: 26px;
+    color: #ffd966;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin: 8px 0 22px
+}
+
+.hero p {
+    font-size: 23px
+}
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    border-radius: 999px;
+    padding: 12px 28px;
+    margin-top: 24px;
+    font-weight: 700;
+    transition: .25s
+}
+
+.btn:hover {
+    background: var(--green);
+    transform: translateY(-2px)
+}
+
+.section {
+    padding: 88px 7%
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 44px
+}
+
+.section-title small {
+    display: block;
+    color: var(--muted);
+    font-size: 16px
+}
+
+.section-title h2 {
+    font-size: 42px;
+    color: var(--green)
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    max-width: 1180px;
+    margin: 0 auto
+}
+
+.card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .08);
+    transition: .25s
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, .14)
+}
+
+.card img {
+    height: 190px;
+    width: 100%;
+    object-fit: cover
+}
+
+.card h3 {
+    font-size: 25px;
+    margin: 24px 0 8px
+}
+
+.card p {
+    font-size: 18px;
+    padding: 0 18px;
+    color: #444;
+    min-height: 70px
+}
+
+.about-simple {
+    background: #fff;
+    text-align: center
+}
+
+.about-simple p {
+    font-size: 21px;
+    max-width: 900px;
+    margin: 0 auto 16px
+}
+
+.news {
+    background: #f0f4ee
+}
+
+.news-list {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px 36px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06)
+}
+
+.news-item {
+    display: flex;
+    gap: 22px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 16px 0
+}
+
+.news-item:last-child {
+    border-bottom: 0
+}
+
+.date {
+    color: var(--green);
+    font-weight: 700;
+    min-width: 110px
+}
+
+.page-hero {
+    background: linear-gradient(120deg, var(--green), var(--deep));
+    color: #fff;
+    text-align: center;
+    padding: 86px 20px
+}
+
+.page-hero h1 {
+    font-size: 52px
+}
+
+.page-hero p {
+    font-size: 22px;
+    color: #f5e8b1
+}
+
+.product-section {
+    max-width: 1180px;
+    margin: 78px auto;
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, .1)
+}
+
+.product-section.reverse .text-block {
+    order: 1
+}
+
+.product-section.reverse img {
+    order: 2
+}
+
+.product-section img {
+    height: 420px;
+    width: 100%;
+    object-fit: cover
+}
+
+.text-block {
+    padding: 54px
+}
+
+.text-block h2 {
+    font-size: 38px;
+    color: var(--green);
+    margin-bottom: 18px
+}
+
+.text-block p {
+    font-size: 20px;
+    margin-bottom: 18px
+}
+
+.check {
+    list-style: none;
+    margin: 18px 0
+}
+
+.check li {
+    font-size: 19px;
+    margin: 8px 0
+}
+
+.check li:before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: 900;
+    margin-right: 10px
+}
+
+.contact-box {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .08);
+    font-size: 20px
+}
+
+.footer {
+    background: var(--deep);
+    color: #fff;
+    text-align: center;
+    padding: 44px 20px;
+    margin-top: 60px
+}
+
+.footer .brand {
+    font-size: 24px;
+    font-weight: 700
+}
+
+.footer p {
+    color: #d8eadc;
+    margin-top: 8px
+}
+
+.mobile-note {
+    display: none
+}
+
+@media(max-width:900px) {
+    .site-header {
+        display: block;
+        text-align: center
+    }
+
+    .nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 14px;
+        gap: 14px
+    }
+
+    .hero {
+        min-height: 560px
+    }
+
+    .hero-card {
+        padding: 36px 28px
+    }
+
+    .hero h1 {
+        font-size: 42px
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .product-section,
+    .product-section.reverse {
+        grid-template-columns: 1fr;
+        margin: 40px 18px
+    }
+
+    .product-section.reverse .text-block,
+    .product-section.reverse img {
+        order: initial
+    }
+
+    .product-section img {
+        height: 280px
+    }
+
+    .text-block {
+        padding: 32px
+    }
+
+    .section {
+        padding: 60px 5%
+    }
+}
+
+@media(max-width:560px) {
+    .logo {
+        font-size: 22px
+    }
+
+    .nav a {
+        font-size: 14px
+    }
+
+    .hero h1 {
+        font-size: 34px
+    }
+
+    .hero .en {
+        font-size: 18px
+    }
+
+    .cards {
+        grid-template-columns: 1fr
+    }
+
+    .section-title h2,
+    .page-hero h1 {
+        font-size: 34px
+    }
+
+    .product-section img {
+        height: 220px
+    }
+
+    .text-block h2 {
+        font-size: 30px
+    }
+
+    .news-item {
+        display: block
+    }
+
+    .date {
+        display: block;
+        margin-bottom: 4px
+    }
+}
