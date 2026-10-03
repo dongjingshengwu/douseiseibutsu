@@ -44,14 +44,6 @@
       <div><a class="btn" href="https://www.jagri-global.jp/tokyo/ja-jp/register.html?code=1777525313632244-K3T" target="_blank" rel="noopener" data-i18n="eventButton">VIP来場登録はこちら</a><small class="event-note" data-i18n="eventNote">専用ページで事前登録できます</small></div>
     </div></aside>
     <section class="intro"><div class="wrap intro-in"><div><p class="eyebrow">Integrated Pollination Technology</p><h1 data-i18n="introTitle">受粉技術は、複数の専門技術を組み合わせた総合技術です。</h1></div><p data-i18n="introText">花の状態、放蜂時期、花量と蜂数、授粉昆虫の組み合わせ、授粉期間中の蜂群管理、授粉後の蜂群価値維持までを一体で考えます。以下は、当社が受粉サービスで重視する<strong>主要な6つの工程</strong>です。</p></div></section>
-    <section id="field-video" style="background:var(--cream)"><div class="wrap">
-      <h2 class="title" data-i18n="videoTitle">受粉と養蜂の現場</h2>
-      <p class="lead" data-i18n="videoText">ミツバチとクロマルハナバチの活動を、写真と映像でご紹介します。</p>
-      <video controls playsinline preload="none" poster="assets/pollination-field-poster.jpg" aria-label="受粉と養蜂の現場" style="display:block;width:100%;height:auto;aspect-ratio:16/9;background:#102a20;border-radius:14px;margin-top:28px">
-        <source src="assets/pollination-field.mp4" type="video/mp4">
-        <span data-i18n="videoFallback">動画を再生できない場合は、</span><a href="assets/pollination-field.mp4" data-i18n="videoDownload">動画ファイルを開いてください。</a>
-      </video>
-    </div></section>
     <section id="technology"><div class="wrap">
       <div class="tech-head"><div><p class="eyebrow">Six Core Practices</p><h2 class="title" data-i18n="sixTitle">受粉技術を構成する6つの主要工程</h2></div><p class="tech-note" data-i18n="panelNote">展板は日本語で表示しています。図と写真から各工程の関係を確認できます。</p></div>
       <div class="panels">
@@ -83,10 +75,6 @@
   Object.assign(copy["zh-TW"],{navEvent:"展會資訊",eventEyebrow:"展會資訊",eventTitle:"參展第16屆農業WEEK（J-AGRI TOKYO）",eventText:"現場介紹授粉技術，以及配合作物和花期的一貫式授粉服務。",eventMeta:"2026年10月7日（三）–9日（五）｜幕張展覽館｜展位 28-51",eventButton:"VIP來場登記",eventNote:"可前往專用頁面事先登記"});
   Object.assign(copy.en,{navEvent:"Exhibition",eventEyebrow:"Exhibition Information",eventTitle:"Meet us at the 16th J-AGRI TOKYO",eventText:"Discover our pollination technology and end-to-end services tailored to crops and flowering periods.",eventMeta:"October 7–9, 2026｜Makuhari Messe｜Booth 28-51",eventButton:"VIP visitor registration",eventNote:"Advance registration opens on the official page"});
   Object.assign(copy.ko,{navEvent:"전시회",eventEyebrow:"전시회 안내",eventTitle:"제16회 농업WEEK(J-AGRI TOKYO)에 출전합니다",eventText:"작물과 개화 시기에 맞춘 수분 기술 및 일관 수분 서비스를 소개합니다.",eventMeta:"2026년 10월 7일–9일｜마쿠하리 멧세｜부스 28-51",eventButton:"VIP 방문 등록",eventNote:"공식 전용 페이지에서 사전 등록할 수 있습니다"});
-  Object.assign(copy.ja,{videoTitle:"受粉と養蜂の現場",videoText:"ミツバチとクロマルハナバチの活動を、写真と映像でご紹介します。",videoFallback:"動画を再生できない場合は、",videoDownload:"動画ファイルを開いてください。"});
-  Object.assign(copy["zh-TW"],{videoTitle:"授粉與養蜂現場",videoText:"透過照片與影片，介紹蜜蜂與日本熊蜂的活動。",videoFallback:"如無法播放，請",videoDownload:"開啟影片檔案。"});
-  Object.assign(copy.en,{videoTitle:"Pollination and beekeeping in the field",videoText:"Watch honeybees and Japanese bumblebees in photographs and video.",videoFallback:"If playback is unavailable, ",videoDownload:"open the video file."});
-  Object.assign(copy.ko,{videoTitle:"수분과 양봉 현장",videoText:"사진과 영상으로 꿀벌과 일본뒤영벌의 활동을 소개합니다.",videoFallback:"재생할 수 없는 경우 ",videoDownload:"영상 파일을 열어주세요."});
   function setLang(lang){const d=copy[lang]||copy.ja;document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>{const v=d[el.dataset.i18n];if(v!==undefined)el.innerHTML=v});document.querySelectorAll(".lang").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));localStorage.setItem("siteLanguage",lang)}
   document.querySelectorAll(".lang").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
   document.querySelectorAll(".nav a").forEach(a=>a.addEventListener("click",()=>document.getElementById("nav").classList.remove("open")));
