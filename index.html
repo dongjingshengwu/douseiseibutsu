@@ -30,7 +30,7 @@
   .bee-sales{background:linear-gradient(135deg,#fff8de,#edf3e8);padding:58px 0 44px;scroll-margin-top:100px}.bee-sales .title{color:var(--green);font-size:clamp(2.2rem,5vw,4.1rem)}.bee-sales .lead{color:var(--ink);font-size:1.2rem;max-width:900px}.bee-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}.bee-secondary{background:#fff;border:2px solid var(--green);color:var(--green)}.bee-sales .cards{margin-top:30px}.bee-sales .card h2{font-size:1.4rem;line-height:1.4;margin:16px 0 10px}.bee-note{font-size:1.05rem;margin:24px 0 0;color:var(--ink);max-width:1000px}section[id]{scroll-margin-top:100px}.nav{gap:12px;font-size:.95rem}@media(max-width:1180px) and (min-width:981px){.header-in{flex-wrap:wrap;padding:12px 0;gap:10px}.nav{width:100%;margin-left:0;justify-content:space-between}.header{position:relative}}@media(max-width:700px){.bee-sales{padding:38px 0}.bee-actions .btn{width:100%;min-width:0}.bee-sales .card{padding:24px}.bee-sales .title{font-size:2.3rem}}
 
     .knowledge{background:var(--pale)}.knowledge-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,1fr);gap:34px;align-items:center;margin-top:34px}.knowledge-player{min-width:0}.knowledge-player video{display:block;width:100%;aspect-ratio:16/9;height:auto;background:#112c2b;border-radius:14px;box-shadow:var(--shadow)}.knowledge-episode{display:inline-block;color:var(--green2);font-size:.95rem;font-weight:900;letter-spacing:.08em}.knowledge-info h3{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.4;margin:12px 0}.knowledge-info p{color:var(--muted);margin:14px 0}.knowledge-meta{font-size:.95rem}.knowledge-link{text-decoration:underline;text-underline-offset:4px;color:var(--green);font-weight:700}.knowledge-player p{margin:12px 0 0;font-size:.95rem;color:var(--muted)}@media(max-width:900px){.knowledge-grid{grid-template-columns:1fr;gap:24px}}
-#grafting-queen{scroll-margin-top:110px}
+#grafting-queen,#bee-development{scroll-margin-top:110px}
 </style>
 </head>
 <body>
@@ -66,6 +66,18 @@
           <p data-i18n="graftingDescription">養蜂家が適切な日齢の幼虫を人工の王椀へ移し、働き蜂が女王蜂へと育てる方法をご紹介します。移虫から産卵の確認までを、アニメーションでたどります。</p>
           <p class="knowledge-meta" data-i18n="graftingMeta">約1分15秒｜日本語ナレーション・字幕付き｜動静養蜂園</p>
           <p class="knowledge-meta" data-i18n="graftingNote">孵化後1日齢の幼虫を優先し、気温や季節の条件によっては2日齢も使います。育王枠に取り付けた王椀は、開口部を下に向けます。</p>
+        </article>
+      </div>
+      <div class="knowledge-grid" id="bee-development">
+        <div class="knowledge-player"><video controls playsinline preload="none" poster="assets/bee-growth-ja.jpg" aria-label="女王蜂・働き蜂・雄蜂の成長比較 日本語解説付きアニメーション">
+          <source src="assets/bee-growth-ja.mp4" type="video/mp4">
+          <a href="assets/bee-growth-ja.mp4" data-i18n="knowledgeOpen">動画を開く</a>
+        </video><p><a class="knowledge-link" href="assets/bee-growth-ja.mp4" data-i18n="knowledgeOpen">動画を開く</a></p></div>
+        <article class="knowledge-info"><span class="knowledge-episode" data-i18n="growthEpisode">第02話 · 卵から出房まで</span>
+          <h3 data-i18n="growthTitle">女王蜂・働き蜂・雄蜂の出房までの日数</h3>
+          <p data-i18n="growthDescription">卵から幼虫、蛹、成虫へ。女王蜂・働き蜂・雄蜂が巣房から出るまでの時間を、同じ時間軸のアニメーションで比較します。女王蜂の出房後の交尾・産卵と、それぞれの蜂の役割もご紹介します。</p>
+          <p class="knowledge-meta" data-i18n="growthMeta">約1分50秒｜日本語ナレーション・画面解説付き｜動静養蜂園</p>
+          <p class="knowledge-meta" data-i18n="growthNote">セイヨウミツバチの目安は、産卵から出房まで女王蜂約16日、働き蜂約21日、雄蜂約24日。発育や交尾・産卵の時期は、蜂種、温度、天候や群の状態などによって変わります。</p>
         </article>
       </div>
     </div></section>
@@ -112,6 +124,10 @@
   Object.assign(copy["zh-TW"],{"graftingEpisode": "第01集 · 人工移蟲育王", "graftingTitle": "人工移蟲育王", "graftingDescription": "養蜂人將適齡幼蟲移入人工王碗，再由工蜂培育成蜂王。透過動畫了解從移蟲到確認產卵的過程。", "graftingMeta": "約1分15秒｜日語解說及日文字幕｜動静養蜂園", "graftingNote": "優先選用孵化後1日齡幼蟲，視氣溫和季節條件也可選用2日齡幼蟲。放回育王框後，王碗開口朝下。"});
   Object.assign(copy["en"],{"graftingEpisode": "Episode 01 · Grafting queen rearing", "graftingTitle": "Queen rearing by grafting", "graftingDescription": "A beekeeper transfers suitable young larvae into artificial queen cups, and worker bees raise them as queens. Follow the process from grafting to the first eggs.", "graftingMeta": "1 min 15 sec | Japanese narration and captions | Dousei Apiary", "graftingNote": "Prefer larvae one day after hatching; two-day-old larvae may be used depending on temperature and season. Cups face down when returned to the cell-building frame."});
   Object.assign(copy["ko"],{"graftingEpisode": "제01화 · 이충을 통한 여왕벌 육성", "graftingTitle": "이충을 통한 여왕벌 육성", "graftingDescription": "양봉가가 적절한 일령의 유충을 인공 왕완에 옮기면 일벌이 여왕벌로 기릅니다. 이충부터 산란 확인까지 애니메이션으로 소개합니다.", "graftingMeta": "약 1분 15초 | 일본어 해설·자막 | 動静養蜂園", "graftingNote": "부화 후 1일령 유충을 우선 선택하며, 기온과 계절 조건에 따라 2일령도 사용할 수 있습니다. 육왕틀에 넣을 때 왕완의 입구는 아래로 향합니다."});
+  Object.assign(copy["ja"],{"growthEpisode": "第02話 · 卵から出房まで", "growthTitle": "女王蜂・働き蜂・雄蜂の出房までの日数", "growthDescription": "卵から幼虫、蛹、成虫へ。女王蜂・働き蜂・雄蜂が巣房から出るまでの時間を、同じ時間軸のアニメーションで比較します。女王蜂の出房後の交尾・産卵と、それぞれの蜂の役割もご紹介します。", "growthMeta": "約1分50秒｜日本語ナレーション・画面解説付き｜動静養蜂園", "growthNote": "セイヨウミツバチの目安は、産卵から出房まで女王蜂約16日、働き蜂約21日、雄蜂約24日。発育や交尾・産卵の時期は、蜂種、温度、天候や群の状態などによって変わります。"});
+  Object.assign(copy["zh-TW"],{"growthEpisode": "第02集 · 蜜蜂的成長", "growthTitle": "蜂王、工蜂與雄蜂從產卵到出房的天數", "growthDescription": "從卵、幼蟲、蛹到成蜂，以同一時間軸比較蜂王、工蜂和雄蜂出房所需的時間，並介紹蜂王出房後的交尾、產卵，以及三種蜂的主要分工。", "growthMeta": "約1分50秒｜日語解說及日文畫面說明｜動静養蜂園", "growthNote": "西洋蜜蜂從產卵到出房的參考時間：蜂王約16天、工蜂約21天、雄蜂約24天。實際發育、交尾及產卵時間隨蜂種、溫度、天候及蜂群狀態等而變化。"});
+  Object.assign(copy["en"],{"growthEpisode": "Episode 02 · Honey bee development", "growthTitle": "Days from egg laying to emergence: queens, workers and drones", "growthDescription": "Follow eggs, larvae, pupae and adults on a shared animated timeline. Compare the time to emergence, then learn about a young queen’s mating and egg laying and the roles of the three castes.", "growthMeta": "1 min 50 sec | Japanese narration and on-screen explanations | Dousei Apiary", "growthNote": "Typical emergence times for western honey bees are about 16 days for queens, 21 for workers and 24 for drones, counted from egg laying. Development, mating and egg laying vary with bee type, temperature, weather and colony conditions."});
+  Object.assign(copy["ko"],{"growthEpisode": "제02화 · 꿀벌의 성장", "growthTitle": "여왕벌·일벌·수벌의 산란부터 출방까지의 일수", "growthDescription": "알, 유충, 번데기, 성충으로 이어지는 과정을 같은 시간축에서 비교합니다. 여왕벌의 출방 후 교미와 산란, 세 종류 꿀벌의 역할도 소개합니다.", "growthMeta": "약 1분 50초 | 일본어 해설·화면 설명 | 動静養蜂園", "growthNote": "서양꿀벌은 산란부터 출방까지 여왕벌 약 16일, 일벌 약 21일, 수벌 약 24일이 걸립니다. 발육과 교미·산란 시기는 벌의 종류, 온도, 날씨, 봉군 상태 등에 따라 달라집니다."});
   function setLang(lang){const d=copy[lang]||copy.ja;document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>{const v=d[el.dataset.i18n];if(v!==undefined)el.innerHTML=v});document.querySelectorAll(".lang").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));localStorage.setItem("siteLanguage",lang)}
   document.querySelectorAll(".lang").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
   document.querySelectorAll(".nav a").forEach(a=>a.addEventListener("click",()=>document.getElementById("nav").classList.remove("open")));
