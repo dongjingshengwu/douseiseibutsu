@@ -109,9 +109,9 @@
           <a href="assets/honeybee-food-ja.mp4" data-i18n="knowledgeOpen">動画を開く</a>
         </video><p><a class="knowledge-link" href="assets/honeybee-food-ja.mp4" data-i18n="knowledgeOpen">動画を開く</a></p></div>
         <article class="knowledge-info">
-          <h3 id="honeybee-food-title">ミツバチの食べもの</h3>
-          <p>花の蜜や花粉など、ミツバチの食べものを紹介します。</p>
-          <p class="knowledge-meta">約1分48秒｜日本語ナレーション・字幕付き</p>
+          <h3 id="honeybee-food-title" data-i18n="foodTitle">ミツバチの食べもの</h3>
+          <p data-i18n="foodDescription">花の蜜や花粉など、ミツバチの食べものを紹介します。</p>
+          <p class="knowledge-meta" data-i18n="foodMeta">約1分48秒｜日本語ナレーション・字幕付き</p>
         </article>
       </div>
       <div class="knowledge-grid" id="grafting-queen">
@@ -217,7 +217,28 @@
   Object.assign(copy["zh-TW"],{"foulbroodEpisode": "腐蛆病的原理與預防", "foulbroodTitle": "蜜蜂腐蛆病", "foulbroodDescription": "以動畫介紹歐洲與美洲腐蛆病的感染原理、芽孢是什麼，以及開箱觀察的要點，並說明防止蜂群間交叉傳播、蜂具衛生及哺育管理等日常預防措施。", "foulbroodMeta": "約2分50秒｜日語配音・日文大字字幕"});
   Object.assign(copy["en"],{"foulbroodEpisode": "Foulbrood: how it spreads and prevention", "foulbroodTitle": "Foulbrood in honey bees", "foulbroodDescription": "An animated introduction to European and American foulbrood: how infection occurs, what bacterial spores are, and what to look for during hive inspections. Includes preventing cross-contamination, equipment hygiene and brood care.", "foulbroodMeta": "About 2 min 50 sec | Japanese narration and large Japanese captions"});
   Object.assign(copy["ko"],{"foulbroodEpisode": "부저병의 원리와 예방", "foulbroodTitle": "꿀벌 부저병", "foulbroodDescription": "유럽부저병과 미국부저병의 감염 원리, 세균의 아포, 내검 시 관찰할 점을 애니메이션으로 설명합니다. 봉군 사이의 교차 전파 방지, 봉구 위생과 육아 환경 등 일상적인 예방 방법도 소개합니다.", "foulbroodMeta": "약 2분 50초 | 일본어 해설·일본어 큰 자막"});
-  function setLang(lang){const d=copy[lang]||copy.ja;document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>{const v=d[el.dataset.i18n];if(v!==undefined)el.innerHTML=v});document.querySelectorAll(".lang").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));localStorage.setItem("siteLanguage",lang)}
+  Object.assign(copy.ja, {foodTitle: "ミツバチの食べもの", foodDescription: "花の蜜や花粉など、ミツバチの食べものを紹介します。", foodMeta: "日本語ナレーション・字幕付き"});
+  Object.assign(copy["zh-TW"], {foodTitle: "蜜蜂的食物", foodDescription: "認識花蜜、花粉等蜜蜂的食物。", foodMeta: "中文旁白・中文字幕"});
+  Object.assign(copy.en, {foodTitle: "What honey bees eat", foodDescription: "Learn about nectar, pollen and other foods honey bees eat.", foodMeta: "Currently available in Japanese"});
+  Object.assign(copy.ko, {foodTitle: "꿀벌의 먹이", foodDescription: "꽃꿀과 꽃가루 등 꿀벌의 먹이를 소개합니다.", foodMeta: "현재 일본어 영상 제공"});
+
+  const foodCard = document.getElementById("honeybee-food");
+  const foodVideo = foodCard.querySelector("video");
+  const foodSource = foodVideo.querySelector("source");
+
+  function setFoodVideoLanguage(lang) {
+    const chinese = lang === "zh-TW";
+    const src = chinese ? "assets/honeybee-food-zh.mp4" : "assets/honeybee-food-ja.mp4";
+    if (foodSource.getAttribute("src") === src) return;
+
+    foodVideo.pause();
+    foodVideo.poster = chinese ? "assets/honeybee-food-zh-poster.jpg" : "assets/honeybee-food-ja-poster.svg";
+    foodSource.setAttribute("src", src);
+    foodCard.querySelectorAll(".knowledge-player a").forEach(link => { link.href = src; });
+    foodVideo.load();
+  }
+
+  function setLang(lang){const d=copy[lang]||copy.ja;document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>{const v=d[el.dataset.i18n];if(v!==undefined)el.innerHTML=v});document.querySelectorAll(".lang").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));setFoodVideoLanguage(lang);localStorage.setItem("siteLanguage",lang)}
   document.querySelectorAll(".lang").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
   document.querySelectorAll(".nav a").forEach(a=>a.addEventListener("click",()=>document.getElementById("nav").classList.remove("open")));
   setLang(localStorage.getItem("siteLanguage")||"ja");
